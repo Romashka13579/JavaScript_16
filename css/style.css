@@ -77,10 +77,52 @@ body{
 
 .git-header-fixed{
     position: fixed;
+    display: flex;
     top: 60px;
     width: 100%;
     height: 70px;
     border-bottom: 1px solid rgb(201, 201, 201);
-    padding-top: 20px;
-    box-sizing: border-box;
+    justify-content: space-around;
+}
+
+.git-header-fixed-inside{
+    margin-top: 25px;
+    display: flex;
+    gap: 10px;
+}
+
+.git-header-fixed-block{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: black;
+}
+
+.git-fixed-block{
+    display: flex;
+    flex-direction: row;
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: auto;
+    gap: 10px;
+    transition: background 200ms;
+}
+
+.git-header-fixed-block:hover > .git-fixed-block{
+    background: rgb(240, 240, 240);
+}
+
+.git-fixed-txt{
+    font-family: Inter;
+    font-size: 16px;
+}
+
+.git-fixed-line{
+    height: 2px;
+    border-radius: 1px;
+    transition: background 500ms;
+}
+
+.git-header-fixed-block:hover > .git-fixed-line{
+    background: rgb(255, 60, 0);
 }
