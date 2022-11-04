@@ -9,6 +9,7 @@ body{
     display: flex;
     align-items: center;
     flex-direction: column;
+    min-height: 200vh;
 }
 
 .git-header{
@@ -20,6 +21,7 @@ body{
     padding: 0px 30px;
     box-sizing: border-box;
     align-items: center;
+    margin-bottom: 15px;
 }
 
 .git-right,
@@ -80,18 +82,20 @@ body{
 }
 
 .git-header-fixed{
-    position: fixed;
+    position: sticky;
+    top: 0px;
+    padding-top: 10px;
     display: flex;
-    top: 60px;
     width: 100%;
-    height: 70px;
+    height: 55px;
     border-bottom: 1px solid rgb(201, 201, 201);
     justify-content: space-around;
     z-index: 2;
+    background: white;
+    box-sizing: border-box;
 }
 
 .git-header-fixed-inside{
-    margin-top: 25px;
     display: flex;
     gap: 10px;
 }
@@ -193,10 +197,22 @@ body{
     font-size: 13px;
 }
 
-.git-main-left-editing{
+.git-main-left-addictions{
+    display: none;
+    gap: 5px;
+    align-items: center;
+}
+
+.git-main-left-addiction{
     display: flex;
+    gap: 5px;
+    flex-direction: column;
+}
+
+.git-main-left-editing{
     flex-direction: column;
     gap: 8px;
+    display: none;
 }
 
 .git-main-left-editing-txt{
@@ -212,10 +228,72 @@ body{
     padding: 6px 10px;
     border-radius: 5px;
     border: 1px solid rgb(220, 220, 220);
-    outline: none;
+    font-weight: 100;
+    box-sizing: border-box;
+    transition: outline 100ms;
 }
 
+.git-main-left-editing-block-input:focus,
 .git-main-left-editing-name:focus,
 .git-main-left-editing-bio:focus{
     outline: 2px solid rgb(32, 56, 235);
+}
+
+.git-main-left-editing-txt-2{
+    font-size: 12px;
+    color: rgb(130, 130, 130);
+}
+
+.git-main-left-editing-block{
+    display: flex;
+    gap: 10px;
+    width: 300px;
+    align-items: center;
+}
+
+.git-main-left-editing-block-input{
+    width: 300px;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(220, 220, 220);
+    font-weight: 100;
+    box-sizing: border-box;
+    transition: outline 100ms;
+}
+
+.git-main-left-editing-block-input-3{
+    width: auto;
+    outline: none;
+}
+
+.git-main-left-editing-block-input-3:focus{
+    outline: none;
+}
+
+.git-main-left-editing-block-icon{
+    color: grey;
+}
+
+.git-main-left-editing-block-txt{
+    font-size: 14px;
+    color: rgb(56, 56, 56);
+}
+
+.git-main-left-editing-save-btn{
+    padding: 4px 10px;
+    box-sizing: border-box;
+    background: rgb(0, 169, 0);
+    border: 1px solid green;
+    border-radius: 5px;
+    color: white;
+}
+
+.git-main-left-editing-cancel-btn{
+    padding: 4px 10px;
+    box-sizing: border-box;
+    border: 1px solid rgb(182, 182, 182);
+    background: rgb(240, 240, 240);
+    border-radius: 5px;
 }
