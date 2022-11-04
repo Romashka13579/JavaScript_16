@@ -137,7 +137,7 @@ body{
 
 .git-main{
     display: grid;
-    gap: 20px;
+    gap: 30px;
     grid-template-columns: 300px 1fr;
     margin-top: -40px;
 }
@@ -340,11 +340,68 @@ body{
     display: flex;
     flex-direction: column;
     gap: 15px;
-    margin: auto 10px;
+    margin: auto 15px;
 }
 
+.git-main-right-section-left-2,
 .git-main-right-section-left-1{
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 8px;
+    align-items: center;
+}
+
+.git-main-right-section-left-2{gap: 3px;}
+
+.git-main-right-section-txt{
+    color: rgb(47, 151, 255);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.git-main-right-section-txt:hover{
+    text-decoration: underline;
+}
+
+.git-main-right-section-public{
+    border: 1px solid rgb(192, 192, 192);
+    font-size: 12px;
+    padding: 2px 4px;
+    border-radius: 20px;
+    color: rgb(123, 123, 123);
+    font-weight: 600;
+}
+
+.git-main-right-section-color{
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: rgb(201, 10, 10);
+}
+
+.git-main-right-section-number,
+.git-main-right-section-type{
+    font-size: 12px;
+    margin-right: 10px;
+    color: rgb(109, 109, 109);
+}
+
+.git-main-right-section-star{
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(58, 58, 58);
+}
+
+.git-main-right-section-right{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 15px;
+}
+
+.git-main-right-section-right-icon{
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(109, 109, 109);
 }
