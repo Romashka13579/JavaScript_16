@@ -214,6 +214,43 @@ body{
     z-index: 3;
 }
 
+.git-main-left-logo-status{
+    display: flex;
+    flex-direction: row;
+    margin: 230px 0px 0px 260px;
+    border: 1px solid rgb(202, 202, 202);
+    position: absolute;
+    background: white;
+    border-radius: 50px;
+    overflow: hidden;
+    align-items: center;
+    transition: width 1s;
+}
+
+.git-main-left-logo-status-icon{
+    width: 36px;
+    height: 36px;
+    padding: 10px;
+    background: white;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.git-main-left-logo-status-icon-1{
+    width: 16px;
+    height: 16px;
+    background: url(../img/electric-guitar.png) center/cover;
+}
+
+.git-main-left-logo-status-txt{
+    display: none;
+    left: auto;
+}
+
+.git-main-left-logo-status:hover > .git-main-left-logo-status-txt{
+    color: rgb(68, 115, 255);
+}
+
 .git-main-left-description{
     display: flex;
     flex-direction: column;

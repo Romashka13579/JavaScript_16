@@ -1,3 +1,11 @@
+var gitMainLeftLogoStatus = document.querySelector('.git-main-left-logo-status');
+
+gitMainLeftLogoStatus.addEventListener('mouseover', () => {
+    document.querySelector('.git-main-left-logo-status-txt').style.display = "block";
+    // setTimeout(() =>{
+    //     right:0px;
+    // }, 10);
+})
 
 document.querySelector('.git-main-left-edit-btn').addEventListener('click', () => {
     document.querySelector('.git-main-left-namenick').style.display = "none";
