@@ -59,10 +59,15 @@ body{
 }
 .git-profile-list,
 .git-plus-list{
+    position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 5px;
+    outline: none;
+    border: none;
+    background: none;
+    padding: 0px;
 }
 
 .git-profile{
@@ -77,8 +82,60 @@ body{
 .git-bell:hover,
 .git-plus-list:hover > .git-plus,
 .git-plus-list:hover > .git-carret-down,
-.git-profile-list:hover > .git-carret-down{
+.git-profile-list:hover > .git-carret-down,
+.git-plus-list:focus > .git-plus,
+.git-plus-list:focus > .git-carret-down,
+.git-profile-list:focus > .git-carret-down{
     color: rgb(214, 214, 214);
+}
+
+.git-plus-list-absolute-triangle{
+    display: none;
+    position: absolute;
+    top: 24px;
+    right: 10px;
+    width: 12px;
+    height: 6px;
+    -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background: white;
+    border: 1px solid rgb(202, 202, 202);
+    border-bottom: none;
+    z-index: 3;
+}
+
+.git-plus-list-absolute{
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    width: max-content;
+    padding: 4px 0px;
+    top: 30px;
+    right: 0px;
+    background: white;
+    z-index: 3;
+    border: 1px solid rgb(202, 202, 202);
+    border-radius: 5px;
+}
+
+.git-plus-list-absolute-item{
+    padding: 6px 30px 6px 15px;
+    font-size: 14px;
+    color: rgb(94, 94, 94);
+    text-align: left;
+    text-decoration: none;
+}
+
+.git-plus-list-absolute-item:hover{
+    background: rgb(68, 115, 255);
+    color: white;
+}
+
+.git-plus-list:focus > .git-plus-list-absolute-triangle{
+    display: block;
+}
+.git-plus-list:focus > .git-plus-list-absolute{
+    display: flex;
 }
 
 .git-header-fixed{
@@ -404,4 +461,107 @@ body{
     font-size: 14px;
     font-weight: 600;
     color: rgb(109, 109, 109);
+}
+
+.git-profile-list-absolute{
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    width: max-content;
+    padding: 8px 0px;
+    top: 30px;
+    right: 0px;
+    background: white;
+    z-index: 3;
+    border: 1px solid rgb(202, 202, 202);
+    border-radius: 5px;
+    gap: 8px;
+}
+
+.git-profile-list-absolute-triangle{
+    display: none;
+    position: absolute;
+    top: 24px;
+    right: 10px;
+    width: 12px;
+    height: 6px;
+    -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background: white;
+    border: 1px solid rgb(202, 202, 202);
+    border-bottom: none;
+    z-index: 3;
+}
+
+.git-profile-list-absolute-block{
+    display: flex;
+    flex-direction: column;
+}
+
+.git-profile-list-absolute-line{
+    height: 0.8px;
+    background: rgb(202, 202, 202);
+}
+
+.git-profile-list-absolute-top{
+    width: min-content;
+    padding: 6px 30px 6px 15px;
+    font-size: 14px;
+    color: rgb(94, 94, 94);
+    text-align: left;
+    text-decoration: none;
+}
+
+.git-profile-list-absolute-item{
+    padding: 6px 30px 6px 15px;
+    font-size: 14px;
+    color: rgb(94, 94, 94);
+    text-align: left;
+    text-decoration: none;
+}
+
+.git-profile-list-absolute-item:hover{
+    background: rgb(68, 115, 255);
+    color: white;
+}
+
+.git-profile-list-absolute-status{
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    margin: 0px 15px;
+    padding: 5px 10px;
+    border: 1px solid rgb(202, 202, 202);
+    border-radius: 5px;
+    gap: 10px;
+    text-decoration: none;
+    align-items: center;
+    color: rgb(94, 94, 94);
+}
+
+.git-profile-list-absolute-status-icon{
+    width: 16px;
+    height: 16px;
+    background: url(../img/electric-guitar.png) center/cover;
+}
+
+.git-profile-list-absolute-status-txt{
+    position: relative;
+    height: 16px;
+    overflow: hidden;
+}
+
+.git-profile-list-absolute-status-txt-1{
+    width: max-content;
+    position: absolute;
+}
+
+.git-profile-list-absolute-status:hover > .git-profile-list-absolute-status-txt .git-profile-list-absolute-status-txt-1{
+    color: rgb(68, 115, 255);
+}
+
+.git-profile-list:focus > .git-profile-list-absolute-triangle{
+    display: block;
+}
+.git-profile-list:focus > .git-profile-list-absolute{
+    display: flex;
 }

@@ -1,4 +1,3 @@
-var gitMainLeftEditingBlocksInputs = document.querySelectorAll('.git-main-left-editing-block-input');
 
 document.querySelector('.git-main-left-edit-btn').addEventListener('click', () => {
     document.querySelector('.git-main-left-namenick').style.display = "none";
