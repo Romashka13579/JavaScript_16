@@ -55,6 +55,31 @@ inChangeFooterBtnClear.addEventListener('click', () => {
     gitMainLeftLogoStatus.style.borderColor = "rgb(202, 202, 202)";
 });
 
+document.querySelector('.in-change-block-changing-txt').addEventListener('input', () => {
+    if(document.querySelector('.in-change-block-changing-txt').value == ""){
+        document.querySelector('.in-change-block-suggestions').style.display = "block";
+    }
+    else{
+        document.querySelector('.in-change-block-suggestions').style.display = "none";
+    }
+});
+
+var inChangeBlockSuggestionsBlocks = document.querySelectorAll('.in-change-block-suggestions-block');
+
+inChangeBlockSuggestionsBlocks.forEach(inChangeBlockSuggestionsBlock => {
+    inChangeBlockSuggestionsBlock.addEventListener('click', () => {
+        document.querySelector('.in-change-block-changing-icon-1').style.background = inChangeBlockSuggestionsBlock.querySelector('.in-change-block-suggestions-block-icon').style.background;
+        document.querySelector('.in-change-block-changing-txt').value = inChangeBlockSuggestionsBlock.querySelector('.in-change-block-suggestions-block-txt').innerHTML;
+        document.querySelector('.in-change-block-suggestions').style.display = "none";
+    })
+});
+
+// var inChangeBlock2Dropdown = document.querySelector('.in-change-block-2-dropdown');
+
+// inChangeBlock2Dropdown.addEventListener('click', () => {
+//     document.querySelector('.in-change-block-2-dropdown-absolute').style.display = "block";
+// });
+
 document.querySelector('.in-change-block-busy-checkbox').addEventListener('change', () => {
     if (document.querySelector('.in-change-block-busy-checkbox').checked) {
         gitMainLeftLogoStatus.style.backgroundColor = "rgb(255, 255, 184)";

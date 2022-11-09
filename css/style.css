@@ -273,7 +273,6 @@ body{
     background: white;
     height: fit-content;
     border-radius: 8px;
-    overflow: hidden;
 }
 
 .in-change-line{
@@ -342,6 +341,40 @@ body{
     background: url(../img/electric-guitar.png) center/cover;
 }
 
+.in-change-block-suggestions{
+    display: none;
+}
+
+.in-change-block-suggestions-block-txt{
+    font-size: 12px;
+    color: rgb(60, 60, 60);
+}
+
+.in-change-block-suggestions-blocks{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin: 16px 20px;
+    gap: 5px;
+}
+
+.in-change-block-suggestions-block{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.in-change-block-suggestions-block-icon{
+    width: 16px;
+    height: 16px;
+}
+
+.suggestions-block-icon-1{background: url(../img/beach.png) center/cover;}
+.suggestions-block-icon-2{background: url(../img/house.png) center/cover;}
+.suggestions-block-icon-3{background: url(../img/ill.png) center/cover;}
+.suggestions-block-icon-4{background: url(../img/focus.png) center/cover;}
+
 .in-change-block-busy{
     display: flex;
     flex-direction: row;
@@ -380,6 +413,73 @@ body{
 .in-change-block-2-txt{
     font-size: 14px;
     color: rgb(40, 40, 40);
+}
+
+.in-change-block-2-dropdown{
+    position: relative;
+}
+
+.in-change-block-2-dropdown-txt{
+    border: 1px solid rgb(198, 198, 198);
+    background: rgb(243, 243, 243);
+    padding: 5px 10px;
+    font-size: 13px;
+    border-radius: 5px;
+}
+
+.in-change-block-2-dropdown-txt-carret{
+    margin-left: 5px;
+}
+
+.in-change-block-2-dropdown-absolute{
+    position: absolute;
+    left: 0px;
+    top: 30px;
+    width: 220px;
+    background: white;
+    border: 1px solid rgb(197, 197, 197);
+    border-radius: 5px;
+    padding: 5px 0px;
+    text-decoration: none;
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.in-change-block-2-dropdown-absolute-block{
+    display: flex;
+    flex-direction: column;
+}
+
+.in-change-block-2-dropdown-absolute-status{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+.in-change-block-2-dropdown-absolute-line{
+    height: 0.9px;
+    background: rgb(197, 197, 197);
+}
+
+.in-change-block-2-dropdown-item-1,
+.in-change-block-2-dropdown-absolute-item{
+    text-decoration: none;
+    padding: 3px 15px;
+    color: rgb(60, 60, 60);
+    font-size: 11.5px;
+}
+
+.in-change-block-2-dropdown-absolute-status:hover,
+.in-change-block-2-dropdown-absolute-status:hover > .in-change-block-2-dropdown-item-1,
+.in-change-block-2-dropdown-absolute-status:hover > .in-change-block-2-dropdown-absolute-item,
+.in-change-block-2-dropdown-absolute-item:hover{
+    background: rgb(68, 115, 255);
+    color: white;
+}
+
+.in-change-block-2-dropdown:focus > .in-change-block-2-dropdown-absolute{
+    display: flex;
 }
 
 .in-change-footer{
