@@ -1,20 +1,16 @@
 var gitMainLeftLogoStatus = document.querySelector('.git-main-left-logo-status');
-var gitMainLeftLogoStatusOverflow = document.querySelector('.git-main-left-logo-status-overflow');
 var gitMainLeftLogoStatusBlock = document.querySelector('.git-main-left-logo-status-txt');
 
 gitMainLeftLogoStatusBlock.style.marginLeft = ""+(-Math.round(gitMainLeftLogoStatusBlock.clientWidth))+"px";
 gitMainLeftLogoStatusBlock.style.display = "none";
-gitMainLeftLogoStatusOverflow.style.width = ""+gitMainLeftLogoStatus.clientWidth+"px";
-gitMainLeftLogoStatus.addEventListener('mouseover', () => {
+gitMainLeftLogoStatus.addEventListener('mouseenter', () => {
     gitMainLeftLogoStatusBlock.style.display = "block";
     setTimeout(() => {
         gitMainLeftLogoStatusBlock.style.marginLeft = "0px";
-        gitMainLeftLogoStatusOverflow.style.width = ""+gitMainLeftLogoStatus.clientWidth+"px";
     }, 10);
 });
-gitMainLeftLogoStatus.addEventListener('mouseout', () => {
+gitMainLeftLogoStatus.addEventListener('mouseleave', () => {
     gitMainLeftLogoStatusBlock.style.marginLeft = ""+(-Math.round(gitMainLeftLogoStatusBlock.clientWidth))+"px";
-    console.log(gitMainLeftLogoStatusBlock.clientWidth);
 });
 
 document.querySelector('.git-main-left-edit-btn').addEventListener('click', () => {

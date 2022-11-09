@@ -213,27 +213,18 @@ body{
     border-radius: 50%;
     z-index: 3;
 }
-/* 
-.git-main-left-logo-status-overflow{
-    margin: 230px 0px 0px 260px;
-    border: 1px solid rgb(202, 202, 202);
-    position: absolute;
-    border-radius: 50px;
-    overflow: hidden;
-    align-items: center;
-    transition: 500ms;
-} */
 
 .git-main-left-logo-status{
     margin: 230px 0px 0px 260px;
     border: 1px solid rgb(202, 202, 202);
     position: absolute;
+    overflow: hidden;
     display: flex;
     flex-direction: row;
     background: white;
     border-radius: 50px;
     align-items: center;
-    transition: 500ms;
+    transition: 1000ms;
 }
 
 .git-main-left-logo-status-icon{
@@ -254,8 +245,7 @@ body{
 
 .git-main-left-logo-status-txt{
     position: relative;
-    display: block;
-    transition: 500ms;
+    transition: 1000ms;
 }
 
 .git-main-left-logo-status:hover > .git-main-left-logo-status-txt{
