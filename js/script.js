@@ -1,26 +1,71 @@
 var gitMainLeftLogoStatus = document.querySelector('.git-main-left-logo-status');
-var gitMainLeftLogoStatusBlock = document.querySelector('.git-main-left-logo-status-txt');
+var gitMainLeftLogoStatusTxt = document.querySelector('.git-main-left-logo-status-txt');
 var gitMainLeftLogoStatusInChange = document.querySelector('.git-main-left-logo-status-in-change');
 var inChangeHeaderClose = document.querySelector('.in-change-header-close');
+var inChangeFooterBtnSet = document.querySelector('.in-change-footer-btn-set');
+var inChangeFooterBtnClear = document.querySelector('.in-change-footer-btn-clear');
 
-gitMainLeftLogoStatusBlock.style.marginLeft = ""+(-Math.round(gitMainLeftLogoStatusBlock.clientWidth))+"px";
-gitMainLeftLogoStatusBlock.style.display = "none";
+gitMainLeftLogoStatusTxt.style.marginLeft = ""+(-Math.round(gitMainLeftLogoStatusTxt.clientWidth))+"px";
+gitMainLeftLogoStatusTxt.style.display = "none";
 gitMainLeftLogoStatus.addEventListener('mouseenter', () => {
-    gitMainLeftLogoStatusBlock.style.display = "block";
+    gitMainLeftLogoStatusTxt.style.display = "block";
     setTimeout(() => {
-        gitMainLeftLogoStatusBlock.style.marginLeft = "0px";
+        gitMainLeftLogoStatusTxt.style.marginLeft = "0px";
     }, 10);
 });
 gitMainLeftLogoStatus.addEventListener('mouseleave', () => {
-    gitMainLeftLogoStatusBlock.style.marginLeft = ""+(-Math.round(gitMainLeftLogoStatusBlock.clientWidth))+"px";
+    gitMainLeftLogoStatusTxt.style.marginLeft = ""+(-Math.round(gitMainLeftLogoStatusTxt.clientWidth))+"px";
 });
 
 gitMainLeftLogoStatus.addEventListener('click', () => {
     gitMainLeftLogoStatusInChange.style.display = "flex";
+    if(gitMainLeftLogoStatusTxt.innerHTML != "Set status"){
+        gitMainLeftLogoStatusInChange.querySelector('.in-change-block-changing-txt').value = gitMainLeftLogoStatusTxt.innerHTML;
+    }
+    else{
+        gitMainLeftLogoStatusInChange.querySelector('.in-change-block-changing-txt').value ="";
+    }
 });
 
 inChangeHeaderClose.addEventListener('click', () => {
     gitMainLeftLogoStatusInChange.style.display = "none";
+    document.querySelector('.in-change-block-busy-checkbox').checked = false;
+    gitMainLeftLogoStatus.style.backgroundColor = "white";
+    document.querySelector('.git-main-left-logo-status-icon').style.backgroundColor = "white";
+    gitMainLeftLogoStatus.style.borderColor = "rgb(202, 202, 202)";
+});
+
+inChangeFooterBtnSet.addEventListener('click', () => {
+    gitMainLeftLogoStatusInChange.style.display = "none";
+    gitMainLeftLogoStatusTxt.innerHTML = gitMainLeftLogoStatusInChange.querySelector('.in-change-block-changing-txt').value;
+    gitMainLeftLogoStatusTxt.style.display = "block";
+    gitMainLeftLogoStatusTxt.style.marginLeft = ""+(-Math.round(gitMainLeftLogoStatusTxt.clientWidth))+"px";
+    gitMainLeftLogoStatusTxt.style.display = "none";
+});
+
+inChangeFooterBtnClear.addEventListener('click', () => {
+    gitMainLeftLogoStatusInChange.style.display = "none";
+    gitMainLeftLogoStatusTxt.innerHTML = "Set status";
+    gitMainLeftLogoStatusTxt.style.display = "block";
+    gitMainLeftLogoStatusTxt.style.marginLeft = ""+(-Math.round(gitMainLeftLogoStatusTxt.clientWidth))+"px";
+    gitMainLeftLogoStatusTxt.style.display = "none";
+    document.querySelector('.in-change-block-busy-checkbox').checked = false;
+    gitMainLeftLogoStatus.style.backgroundColor = "white";
+    document.querySelector('.git-main-left-logo-status-icon').style.backgroundColor = "white";
+    gitMainLeftLogoStatus.style.borderColor = "rgb(202, 202, 202)";
+});
+
+document.querySelector('.in-change-block-busy-checkbox').addEventListener('change', () => {
+    if (document.querySelector('.in-change-block-busy-checkbox').checked) {
+        gitMainLeftLogoStatus.style.backgroundColor = "rgb(255, 255, 184)";
+        document.querySelector('.git-main-left-logo-status-icon').style.backgroundColor = "rgb(255, 255, 184)";
+        gitMainLeftLogoStatus.style.borderColor = "lightcoral";
+    }
+    else {
+        gitMainLeftLogoStatus.style.backgroundColor = "white";
+        document.querySelector('.git-main-left-logo-status-icon').style.backgroundColor = "white";
+        gitMainLeftLogoStatus.style.borderColor = "rgb(202, 202, 202)";
+    }
 });
 
 document.querySelector('.git-main-left-edit-btn').addEventListener('click', () => {
