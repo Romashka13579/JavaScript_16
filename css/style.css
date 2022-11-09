@@ -224,7 +224,7 @@ body{
     background: white;
     border-radius: 50px;
     align-items: center;
-    transition: 1000ms;
+    transition: width 1000ms;
 }
 
 .git-main-left-logo-status-icon{
@@ -245,11 +245,93 @@ body{
 
 .git-main-left-logo-status-txt{
     position: relative;
+    padding-right: 10px;
     transition: 1000ms;
 }
 
 .git-main-left-logo-status:hover > .git-main-left-logo-status-txt{
     color: rgb(68, 115, 255);
+}
+
+.git-main-left-logo-status-in-change{
+    position: fixed;
+    display: none;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 4;
+    justify-content: space-around;
+}
+
+.git-main-left-logo-status-in-change-block{
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+    background: white;
+    height: fit-content;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.in-change-line{
+    height: 1px;
+    background: rgb(170, 170, 170);
+}
+
+.in-change-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background: rgb(241, 241, 241);
+    align-items: center;
+}
+
+.in-change-block-1{
+    display: flex;
+    flex-direction: column;
+    padding: 15px 20px;
+    gap: 15px;
+}
+
+.in-change-block-changing{
+    display: flex;
+}
+
+.in-change-block-changing-txt{
+    width: 360px;
+    border: 1px solid rgb(170, 170, 170);
+    background: rgb(241, 241, 241);
+    padding: 6px 10px;
+    font-size: 15px;
+    color: black;
+    outline-offset: -2px;
+}
+
+.in-change-block-changing-txt:focus{outline: 2px solid rgb(68, 115, 255);}
+
+.in-change-block-changing-txt::placeholder{color: black;}
+
+.in-change-block-changing-icon{
+    border: 1px solid rgb(170, 170, 170);
+    background: rgb(241, 241, 241);
+    padding: 5px 12px;
+    box-sizing: border-box;
+    border-right: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.in-change-block-changing-icon:hover{
+    border-color: rgb(68, 115, 255);
+    background: rgb(68, 115, 255);
+}
+
+.in-change-block-changing-icon-1{
+    width: 20px;
+    height: 20px;
+    background: url(../img/electric-guitar.png) center/cover;
 }
 
 .git-main-left-description{

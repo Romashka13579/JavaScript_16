@@ -1,5 +1,7 @@
 var gitMainLeftLogoStatus = document.querySelector('.git-main-left-logo-status');
 var gitMainLeftLogoStatusBlock = document.querySelector('.git-main-left-logo-status-txt');
+var gitMainLeftLogoStatusInChange = document.querySelector('.git-main-left-logo-status-in-change');
+var inChangeHeaderClose = document.querySelector('.in-change-header-close');
 
 gitMainLeftLogoStatusBlock.style.marginLeft = ""+(-Math.round(gitMainLeftLogoStatusBlock.clientWidth))+"px";
 gitMainLeftLogoStatusBlock.style.display = "none";
@@ -11,6 +13,14 @@ gitMainLeftLogoStatus.addEventListener('mouseenter', () => {
 });
 gitMainLeftLogoStatus.addEventListener('mouseleave', () => {
     gitMainLeftLogoStatusBlock.style.marginLeft = ""+(-Math.round(gitMainLeftLogoStatusBlock.clientWidth))+"px";
+});
+
+gitMainLeftLogoStatus.addEventListener('click', () => {
+    gitMainLeftLogoStatusInChange.style.display = "flex";
+});
+
+inChangeHeaderClose.addEventListener('click', () => {
+    gitMainLeftLogoStatusInChange.style.display = "none";
 });
 
 document.querySelector('.git-main-left-edit-btn').addEventListener('click', () => {
