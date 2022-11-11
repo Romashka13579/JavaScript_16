@@ -420,6 +420,7 @@ body{
 }
 
 .in-change-block-2-dropdown-txt{
+    display: flex;
     border: 1px solid rgb(198, 198, 198);
     background: rgb(243, 243, 243);
     padding: 5px 10px;
@@ -427,8 +428,19 @@ body{
     border-radius: 5px;
 }
 
+.in-change-block-2-dropdown-txt:active{
+    background: rgb(229, 229, 229);
+}
+
 .in-change-block-2-dropdown-txt-carret{
     margin-left: 5px;
+}
+
+.in-change-block-2-dropdown{
+    position: relative;
+    padding: 0px;
+    border: 0px;
+    outline: 0px;
 }
 
 .in-change-block-2-dropdown-absolute{
@@ -444,6 +456,11 @@ body{
     display: none;
     flex-direction: column;
     gap: 5px;
+    text-align: left;
+}
+
+.in-change-block-2-dropdown-absolute:hover{
+    display: block;
 }
 
 .in-change-block-2-dropdown-absolute-block{
