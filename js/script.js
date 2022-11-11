@@ -65,14 +65,15 @@ document.querySelector('.in-change-block-changing-txt').addEventListener('input'
 });
 
 var inChangeBlockSuggestionsBlocks = document.querySelectorAll('.in-change-block-suggestions-block');
+var ImageArray = ["beach.png", "house.png", "ill.png", "focus.png"];
 
-inChangeBlockSuggestionsBlocks.forEach(inChangeBlockSuggestionsBlock => {
-    inChangeBlockSuggestionsBlock.addEventListener('click', () => {
-        document.querySelector('.in-change-block-changing-icon-1').style.background = inChangeBlockSuggestionsBlock.querySelector('.in-change-block-suggestions-block-icon').style.background;
-        document.querySelector('.in-change-block-changing-txt').value = inChangeBlockSuggestionsBlock.querySelector('.in-change-block-suggestions-block-txt').innerHTML;
+for (let i = 0; i < inChangeBlockSuggestionsBlocks.length; i++) {
+    inChangeBlockSuggestionsBlocks[i].addEventListener('click', () => {
+        document.querySelector('.in-change-block-changing-icon-1').style.background = "url(./img/"+ImageArray[i]+") center/cover";
+        document.querySelector('.in-change-block-changing-txt').value = inChangeBlockSuggestionsBlocks[i].querySelector('.in-change-block-suggestions-block-txt').innerHTML;
         document.querySelector('.in-change-block-suggestions').style.display = "none";
-    })
-});
+    });
+}
 
 var inChangeBlock2Dropdown = document.querySelector('.in-change-block-2-dropdown');
 var items = document.querySelectorAll('.items');
@@ -81,8 +82,7 @@ var ifblock = false;
 
 items.forEach(item => {
     item.addEventListener('click', () => {
-        document.querySelector('.item-txt').innerHTML = item.innerHTML;
-        inChangeBlock2DropdownAbsolute.style.display = "none";
+        document.querySelector('.item-txt').innerHTML = item.querySelector('.items-txt').innerHTML;
     });
 });
 
